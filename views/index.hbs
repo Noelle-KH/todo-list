@@ -3,7 +3,12 @@
     <li class="list-group-item mb-2">
       <div class="row align-items-center">
         <div class="col-auto me-auto">
-          <input type="checkbox" name="isDone" />
+          <input
+            type="checkbox"
+            name="isDone"
+            {{checked this.isDone}}
+            disabled
+          />
           <h4 class="d-inline ms-2">
             {{this.name}}
           </h4>
