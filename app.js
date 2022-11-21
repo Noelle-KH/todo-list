@@ -6,7 +6,7 @@ const routes = require('./routes')
 require('./config/mongoose')
 
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 app.engine('hbs', exphbs.engine({
   defaultLayout: 'main',
@@ -24,6 +24,6 @@ app.use(methodOverride('_method'))
 app.use(routes)
 
 
-app.listen(port, () => {
-  console.log(`Listening on http://loccalhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Listening on http://loccalhost:${PORT}`)
 })
